@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Resume Creator
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="overflow-x-hidden">
+    <header class="h-[4rem] w-screen flex items-center justify-between bg-[#181C14] px-[1.5rem] md:px-[3rem]">
+        <div id="logo" class=" text-xl sm:text-3xl font-bold text-white"> Static Resume by RK</div>
+        <div
+            class=" text-3xl md:text-5xl text-red-500 hover:scale-90 cursor-pointer transition-all delay-100 ">
+            ❤
+        </div>
+    </header>
+    
+    <section class="min-h-[80vh] w-screen bg-[#D1E9F6] p-4 md:p-[3rem] flex flex-col items-center">
+        <img src="myImage.png" alt="" class="h-[10rem] w-[10rem] border-2 object-cover border-[#071952] rounded-[50%]">
+        <br>
+        <h1 class="text-2xl font-bold font-sans " >Hi! I'm <span class="text-4xl text-[#071952]">Rehan Khan </span></h1>
+        <h1 class="text-4xl font-bold font-sans text-[#071952]" id="animated-text"> </h1>
+        <br>
+        <div class="min-h-[20rem] mt-4 w-full  flex md:flex-row flex-col items-center gap-[3rem]">
+            <div id="left" class="min-h-full md:w-[40%] bg-[#EBF4F6]  rounded-md p-6 md:p-[1rem] flex flex-col ">
+                <h1 class="text-3xl font-bold ">Objective</h1>
+                <p class="text-lg font-semibold ">As a passionate and detail-oriented web developer, I am dedicated to creating responsive, user-friendly web applications with a strong focus on performance and aesthetics. With hands-on experience in JavaScript and modern front-end technologies, I thrive in environments where creativity and problem-solving meet. Eager to contribute my technical skills and innovative thinking to develop high-quality, scalable solutions that enhance user experiences</p>
+ <br>
+ <h1 class="text-3xl font-bold "> Certifications</h1>
+ <p class=" text-lg font-semibold">
+    Web 3.0 , Metaverse and AI from Governor Sindh IT Program (OnGoing)</p>
+    <br>
+    <h1 class="text-3xl font-bold "> Hobbies</h1>
+    <ul class="list-disc ml-4">
+        <li  class="text-black font-semibold text-lg">Cricket</li>
+        <li class="text-black font-semibold text-lg">Football</li>
+        <li class="text-black font-semibold text-lg">Nature Enthuthiast</li>
+    </ul>
+    <br>
+    <h1 class="text-3xl font-bold ">   Languages</h1>
+    <ul class="list-disc ml-4">
+        <li  class="text-black font-semibold text-lg">English</li>
+        <li class="text-black font-semibold text-lg">Urdu</li>
+        <li class="text-black font-semibold text-lg">Pashto</li>
+    </ul>
+            </div>
+            <div id="right" class="min-h-[100%] flex flex-col items-center rounded-md justify-between w-full md:w-[55%] bg-[#37B7C3] p-2 md:p-[1rem]">
+             <section id="Personal-Information" class="min-h-[13rem] w-full rounded-md bg-[#EBF4F6] text-black p-4 md:p-[2rem]">
+                <h1 class="text-center font-bold text-4xl">Personal Information</h1>
+                <br>
+                <p class="md:text-lg text-xl font-semibold  ">Name: Muhammad Rehan</p>
+                <p class="md:text-lg text-xl font-semibold  ">Contact: 0323-28**467</p>
+                <p class="md:text-lg text-xl font-semibold  ">Email : rehankhaz3666@gmail.com</p>
+                <p class="md:text-lg text-xl font-semibold ">Address: Near City Court . Karachi - Pakistan</p>
+
+             </section> <br>
+             <section id="Education" class="min-h-[4rem] w-full bg-[#EBF4F6]  text-black rounded-md p-[1rem]">
+                <h1 class="text-center font-bold text-4xl">Education</h1>
+                <br>
+                <p class="text-lg font-semibold">1: Completed Matriculaton from AL-FATHIYYA ACADEMY in 2022</p>
+                <p class="text-lg font-semibold">2: Passout Intermediate from S.M. Government Science College (2022 to 2024)</p>
+             </section> 
+             <br>
+             <section id="Skills" class="min-h-[4rem] w-full bg-[#EBF4F6] text-blackrounded-md p-[1rem]">
+                <h1 class="text-center font-bold text-4xl">Skills</h1>
+                <br> 
+                <ul  class="list-disc ml-4">
+                <li class="text-lg font-semibold">HTML</li>
+                <li class="text-lg font-semibold">CSS</li>
+                <li class="text-lg font-semibold">Tailwind CSS</li>
+                <li class="text-lg font-semibold">JavaScript</li></ul>
+             </section>
+            </div>
+        </div>
+        <br>
+        <br>
+        <p class="text-xl font-semibold "><span class="text-3xl mt-3  font-bold">© </span>2024 Rehan Khan. All rights reserved.
+        </p>
+        <p class="font-semibold text-xl">Made by Rehan Khan with ❤.</p>
+    </section>
+</main>
+<script>
+         const text = "Frontend Developer";
+    const animatedText = document.getElementById('animated-text');
+    let index = 0;
+    let isAnimating = true;
+
+    function animateText() {
+        if (index < text.length) {
+            animatedText.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(animateText, 100); // Adjust speed by changing the delay here
+        } else if (isAnimating) {
+            // Reset the animation
+            setTimeout(() => {
+                animatedText.innerHTML = '';
+                index = 0;
+                animateText();
+            }, 1000); // Delay before restarting the animation
+        }
+    }
+
+    window.onload = animateText;
+</script>
+    
+</body>
+</html>
